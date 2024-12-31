@@ -1,0 +1,402 @@
+body {
+    background-image: url("wood.jpg");/*background*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #34badb;
+    font-family: 'Times New Roman', 'Comic Sans MS';
+    display: flex;
+    justify-content: end;
+  }
+  
+  .buttons:hover {
+    transform: scale(1.1);
+    color:aliceblue;
+    transition: all 0.5s ease-in-out;
+  }
+  .cart-button img {
+    width: 30px; 
+    height: auto; 
+} 
+  /* Cart Button */
+.cart-button {
+  position: relative;
+  display: inline-block;
+}
+  /* Notification Badge */
+.cart-notification {
+  position: absolute;
+  top: 11px;
+  background-color: #e77b3c; 
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 100%;
+  display: none; 
+}
+/*cart List Items*/
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+/*Navbar*/
+  .navbar a {
+    float: right;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }  
+  /*Menu Introduction*/
+.menu-intro h1 {
+    text-align: center;
+    background-color: #34badb;
+    font-family: 'Times New Roman', 'Comic Sans MS';
+    font-size: 400%;
+  }
+  .category {
+    text-align: center;
+    background-color: #1c849e;
+    font-family: 'Times New Roman', 'Comic Sans MS';
+  }
+  .category h2 {
+    text-align: center;
+    font-family: 'Times New Roman', 'Comic Sans MS';
+    font-size: 350%;
+    padding: 20px;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+/* Bestseller */
+.bestseller-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 15px;
+  align-items: center; 
+}
+.bestseller {
+  background-color: transparent;
+  border: 1px solid #2c545f;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  flex: 1 1 calc(50% - 15px);
+  max-width: calc(50% - 15px);
+  margin: 0 auto;
+}
+
+.bestseller:nth-child(3) {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.bestseller:hover {
+  transform: scale(1.05);
+}
+/* Pizza image */
+.bestseller img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+/* Pizza info */
+.bestseller-info {
+  margin-bottom: 10px;
+}
+.bestseller-info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+.bestseller-info .price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .bestseller-info h3 {
+      font-size: 1rem;
+  }
+  .add-to-cart {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+  }
+}
+  .menu-header {
+    color: white;
+    font-size: 18px;
+  }
+  .header h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+  .menu-pizza {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .pizza-big {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 70px;
+  }
+  /*Goliath*/
+  .pizza-big img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    text-align: center;
+  }
+  /*Menu Pizza*/
+  .menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid #2c545f;
+  }
+  .menu-item:hover {
+    transform: translateY(-5px);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .menu-item img {
+    object-fit: cover;
+   margin-top: 20px;
+  }
+  .menu-info {
+    padding: 1px;
+    text-align: center;
+  }
+  .menu-info h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 10px 0 5px;
+  }
+  .menu-info .price {
+    font-size: 1.1em;
+  }
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .menu-item img {
+      height: 150px;
+    }
+  
+    .menu-info h3 {
+      font-size: 1.1em;
+    }
+  
+    .menu-info .price {
+      font-size: 1em;
+    }
+  }
+  /* What's New */
+.photo-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.whats-new {
+    background-color:transparent;
+    border: 1px solid #5e8691;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.whats-new:hover {
+    transform: scale(1.05);
+}
+
+/* Pizza Images */
+.whats-new img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Pizza Info Section */
+.New-Pizza-info {
+    margin-bottom: 15px;
+}
+
+.New-Pizza-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.New-Pizza-info .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+  /* Add to Cart Button */
+  .add-to-cart1{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #33c5ff; 
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center; 
+    justify-items: center;
+  }
+  .add-to-cart {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #33c5ff; 
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    justify-items: center;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #34badb; 
+    transform: translateY(-3px);
+  }
+  
+  .add-to-cart:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .photo-grid-item, .menu-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .photo-grid-item, .menu-item {
+        flex: 1 1 100%;
+    }
+  
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+  }
+ 
+.footer {
+    background-color: #34badb;
+    color: white;
+    text-align: left;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-logo img {
+    width: 120px;;
+  }
+  .footer-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .footer-section a {
+    color:white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-left: 35%;
+    background: #ffffff;
+  }
+  
+  .footer-buttons {
+    text-align: center;
+  }
+  .order-now-btn {
+    background-color: #4085a0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .order-now-btn:hover {
+    background-color: #9ed1f3;
+  }
+  .footer-copyright {
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+  }
+  }

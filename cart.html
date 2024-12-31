@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Miekoy's Pizza</title>
+    <link rel="shortcut icon" href="miekoys.jpg"/> <!-- icon -->
+    <link rel="stylesheet" href="cart.css"> <!-- Link to CSS stylesheet -->
+    <script src="script.js" defer></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="buttons">Home</a>
+        <a href="menu.html" class="buttons">Menu</a>
+        <a href="about.html" class="buttons">About Us</a>
+        <a href="contact.html" class="buttons">Contact</a>
+        <a href="cart.html" class="cart-button">
+            <img src="cart.png" alt="Cart Icon">
+            <span id="cart-notification" class="cart-notification">0</span>
+        </a>
+    </div>
+    
+    <main>
+        <div class="menu-header">
+            <div class="menu-intro">
+                <h1><img src="cart.png" alt="Miekoys Pizza Logo"/>Your Cart  </h1> 
+            </div>
+        </div>
+        <!-- Cart Section -->
+        <div class="cart">
+            <ul id="cart-items"></ul> <!-- Dynamic cart items will appear here -->
+            <div class="cart-total">
+                <h3>Total: PHP <span id="cart-total">0</span></h3>
+            </div>
+            <button id="checkout-button">Checkout</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="miekoys.png" alt="Miekoys Pizza Logo" />
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/miekoys.tigaon"><img src="facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/miekoyslegazpi/"><img src="instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>How To Order</h4>
+                    <a href="menu.html">View Menu</a>
+                    <a href="contact.html">Location</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Promotions</h4>
+                    <a href="#">Promos</a>
+                    <a href="#">Gift Cards</a>
+                </div>
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <a href="about.html">About Miekoys</a>
+                    <a href="#">Careers</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="#">Rate Our Store</a>
+                </div>
+                <div class="footer-section">
+                    <h4>About Our Website</h4>
+                    <a href="#">Privacy Notice</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+            <div class="footer-buttons">
+                <button class="order-now-btn">Order Now</button>
+            </div>
+        </div>
+        <p class="footer-copyright">
+            © 2024 Miekoys Pizza Corporation. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
